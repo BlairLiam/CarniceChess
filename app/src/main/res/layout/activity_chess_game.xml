@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#2C2B29">
+
+    <!-- Eaten Player 1 pieces -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp">
+
+    </LinearLayout>
+
+    <!-- Top Player Profile -->
+    <LinearLayout
+        android:id="@+id/top_player_profile"
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Top Player Profile Picture -->
+        <ImageView
+            android:id="@+id/top_player_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/black_pawn"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop" />
+
+        <!-- Top Player Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/top_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAYER 2"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Top Player Timer -->
+        <TextView
+            android:id="@+id/top_player_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="10:00"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:background="#444444"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/chessboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Row 1: a8-h8 -->
+        <TableRow android:id="@+id/row_8">
+            <FrameLayout android:id="@+id/a8" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_a8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_rook"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b8" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_b8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_knight"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c8" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_c8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_bishop"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d8" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_d8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_queen"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e8" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_e8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_king"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f8" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_f8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_bishop"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g8" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_g8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_knight"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h8" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_h8" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_rook"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Row 2: a7-h7 -->
+        <TableRow android:id="@+id/row_7">
+            <FrameLayout android:id="@+id/a7" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_a7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b7" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_b7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c7" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_c7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d7" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_d7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e7" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_e7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f7" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_f7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g7" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_g7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h7" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_h7" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/black_pawn"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Rest of the rows follow the same pattern... -->
+        <!-- Row 3: a6-h6 -->
+        <TableRow android:id="@+id/row_6">
+            <FrameLayout android:id="@+id/a6" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_a6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b6" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_b6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c6" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_c6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d6" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_d6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e6" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_e6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f6" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_f6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g6" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_g6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h6" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_h6" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Remaining rows... -->
+        <!-- Row 4: a5-h5 -->
+        <TableRow android:id="@+id/row_5">
+            <FrameLayout android:id="@+id/a5" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_a5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b5" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_b5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c5" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_c5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d5" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_d5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e5" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_e5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f5" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_f5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g5" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_g5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h5" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_h5" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Row 5: a4-h4 -->
+        <TableRow android:id="@+id/row_4">
+            <FrameLayout android:id="@+id/a4" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_a4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b4" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_b4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c4" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_c4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d4" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_d4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e4" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_e4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f4" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_f4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g4" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_g4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h4" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_h4" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Row 6: a3-h3 -->
+        <TableRow android:id="@+id/row_3">
+            <FrameLayout android:id="@+id/a3" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_a3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b3" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_b3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c3" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_c3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d3" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_d3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e3" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_e3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f3" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_f3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g3" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_g3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h3" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_h3" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/default_piece"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Row 7: a2-h2 -->
+        <TableRow android:id="@+id/row_2">
+            <FrameLayout android:id="@+id/a2" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_a2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b2" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_b2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c2" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_c2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d2" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_d2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e2" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_e2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f2" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_f2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g2" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_g2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h2" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_h2" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_pawn"/>
+            </FrameLayout>
+        </TableRow>
+
+        <!-- Row 8: a1-h1 -->
+        <TableRow android:id="@+id/row_1">
+            <FrameLayout android:id="@+id/a1" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_a1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_rook"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/b1" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_b1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_knight"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/c1" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_c1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_bishop"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/d1" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_d1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_queen"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/e1" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_e1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_king"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/f1" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_f1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_bishop"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/g1" android:layout_width="48dp" android:layout_height="48dp" android:background="#769656" android:tag="dark">
+                <ImageView android:id="@+id/piece_g1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_knight"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/h1" android:layout_width="48dp" android:layout_height="48dp" android:background="#EEEED2" android:tag="light">
+                <ImageView android:id="@+id/piece_h1" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/white_rook"/>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_player_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Bottom Player Profile Picture -->
+        <ImageView
+            android:id="@+id/bottom_player_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/white_pawn"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop" />
+
+        <!-- Bottom Player Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/bottom_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLAYER 1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Bottom Player Timer -->
+        <TextView
+            android:id="@+id/bottom_player_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="10:00"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:background="#444444"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Eaten Player 1 pieces -->
+
+        <LinearLayout
+            android:id="@+id/bottomNavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/button_user"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_user"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/activity_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_home"
+                android:text="PROFILE"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/button_settings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_settings"
+                android:text="EDIT"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

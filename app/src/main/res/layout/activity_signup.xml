@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Change input text from black to white, change password visibility size-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2B29"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/activity_signup_button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Back"
+        android:minHeight="48dp"
+        android:minWidth="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="24dp"/>
+
+    <EditText
+        android:id="@+id/activity_signup_edittext_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_edittext"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="10dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="#888" />
+
+    <EditText
+        android:id="@+id/activity_signup_edittext_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email (optional)"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:background="@drawable/background_edittext"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="#888"
+        android:layout_marginTop="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/activity_signup_edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:background="@drawable/background_edittext"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:paddingEnd="48dp"/>
+
+        <ImageButton
+            android:id="@+id/activity_signup_button_togglePassword"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_visibility"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Toggle Password Visibility"
+            android:layout_alignEnd="@id/activity_signup_edittext_password"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/activity_signup_edittext_confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:background="@drawable/background_edittext"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:paddingEnd="48dp"/>
+
+        <ImageButton
+            android:id="@+id/activity_signup_button_toggleConfirmPassword"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_visibility"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Toggle Confirm Password Visibility"
+            android:layout_alignEnd="@id/activity_signup_edittext_confirmPassword"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="#44423D"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp"
+            android:paddingHorizontal="8dp"
+            android:background="#2C2B29"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="#44423D"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_signup_button_login"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Log In"
+        android:backgroundTint="#4B4847"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_signup_button_signup"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Sign Up"
+        android:backgroundTint="#7AC142"
+        android:textColor="@android:color/white"
+        android:textStyle="italic"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>
