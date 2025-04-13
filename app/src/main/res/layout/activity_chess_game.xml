@@ -11,7 +11,7 @@
     <!-- Eaten Player 1 pieces -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="128dp">
+        android:layout_height="64dp">
 
     </LinearLayout>
 
